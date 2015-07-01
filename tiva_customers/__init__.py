@@ -34,3 +34,9 @@ def main():
         customer_id = args[0]
         customer_path = os.path.join(customers_path, "%s.json" % customer_id)
         os.remove(customer_path)
+    if command == "get":
+        customer_id = args[0]
+        key = args[1]
+        customer_path = os.path.join(customers_path, "%s.json" % customer_id)
+        customer = json.load(open(customer_path))
+        print customer[key]

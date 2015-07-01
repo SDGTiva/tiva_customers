@@ -1,0 +1,6 @@
+$ rm -rf /tmp/tiva
+$ mkdir /tmp/tiva
+$ tivac add "John Doe" --tiva-path /tmp/tiva
+$ tivac get 0 name --tiva-path /tmp/tiva
+John Doe
+$ 
