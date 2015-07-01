@@ -15,7 +15,8 @@ def main():
     if not os.path.isdir(customers_path):
         os.mkdir(customers_path)
     if command == "add":
-        customer = open(os.path.join(customers_path, "0.json"), "w")
+        customer_id = max(map(lambda filename: int(filename.split(".")[0]), os.listdir(customers_path)) + [-1]) + 1
+        customer = open(os.path.join(customers_path, "%s.json" % customer_id), "w")
         json.dump({
             "name": name
         }, customer)

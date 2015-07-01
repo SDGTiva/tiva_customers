@@ -5,4 +5,8 @@ $ ls /tmp/tiva/customers
 0.json
 $ cat /tmp/tiva/customers/0.json
 {"name": "John Doe"}|
+$ tivac add "John Doe Doe" --tiva-path /tmp/tiva
+$ ls /tmp/tiva/customers
+0.json
+1.json
 $ 
