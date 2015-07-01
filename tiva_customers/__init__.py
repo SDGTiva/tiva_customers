@@ -21,3 +21,10 @@ def main():
             "name": name
         }, customer)
         customer.close()
+    if command == "getid":
+        for filename in os.listdir(customers_path):
+            customer = json.load(open(os.path.join(customers_path, filename)))
+            if customer["name"] == name:
+                customer_id = filename.split(".")[0]
+                print customer_id
+                return

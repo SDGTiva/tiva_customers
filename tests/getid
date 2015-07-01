@@ -1,0 +1,9 @@
+$ rm -rf /tmp/tiva
+$ mkdir /tmp/tiva
+$ tivac add "John Doe" --tiva-path /tmp/tiva
+$ tivac add "John Doe Doe" --tiva-path /tmp/tiva
+$ tivac getid "John Doe" --tiva-path /tmp/tiva
+0
+$ tivac getid "John Doe Doe" --tiva-path /tmp/tiva
+1
+$ 
