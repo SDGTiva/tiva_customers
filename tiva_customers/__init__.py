@@ -40,3 +40,11 @@ def main():
         customer_path = os.path.join(customers_path, "%s.json" % customer_id)
         customer = json.load(open(customer_path))
         print customer[key]
+    if command == "set":
+        customer_id = args[0]
+        key = args[1]
+        value = args[2]
+        customer_path = os.path.join(customers_path, "%s.json" % customer_id)
+        customer = json.load(open(customer_path))
+        customer[key] = value
+        json.dump(customer, open(customer_path, "w"))
