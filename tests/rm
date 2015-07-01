@@ -1,0 +1,9 @@
+$ rm -rf /tmp/tiva
+$ mkdir /tmp/tiva
+$ tivac add "John Doe" --tiva-path /tmp/tiva
+$ ls /tmp/tiva/customers
+0.json
+$ tivac rm 0 --tiva-path /tmp/tiva
+$ ls /tmp/tiva/customers
+|
+$ 
